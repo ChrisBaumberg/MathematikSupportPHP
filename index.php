@@ -550,7 +550,7 @@
 </head>
 <body>
     <?php 
-        $headline = "Hallo";
+        $headline = "";
         $description = "";
         if($_GET["page"]== "home"){
             $headline = "Übersicht";
