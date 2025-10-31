@@ -20,9 +20,3 @@ Dies ist eine Seite, auf der man Hilfe für mathematische Probleme bekommt.
 3. **Aufgaben erstellen:**
 
     Hier kann man sich Aufgaben zufällig erstellen lassen(Grundrechenarten)
-
-4. **Herausforderung:**
-
-    Hier kann man Aufgaben lösen und bekommt eine Auswertung der korrekt und falsch gelösten Aufgaben
-
-*neu* siehe patchnotes
