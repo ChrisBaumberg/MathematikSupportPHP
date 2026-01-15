@@ -8,6 +8,9 @@ function getInput(){
         endvalue=t
     }
     checkbox=document.querySelector(".checkBasic")
+    startvalue = parseInt(startvalue)
+    endvalue = parseInt(endvalue)
+    numoftasks = parseInt(numoftasks)
     return startvalue, endvalue, numoftasks
 }
 function getRandomInt(){
@@ -50,6 +53,7 @@ function randomTasks(){
         taskoperation=getOperator()
         num1=getRandomArbitrary(startvalue,endvalue)
         num2=getRandomArbitrary(startvalue,endvalue)
+        
         if (checkbox.checked==true){
             if (num1==0){
                 num1=1
@@ -70,10 +74,12 @@ function randomTasks(){
                 }
             }
         }
-    
+        if (num2 < 0){
+            num2 = `(${num2})`
+        }
     listel=document.createElement("li")
     listel.setAttribute("class",`task${i}`)
-    content=document.createTextNode(`Aufgabe: ${num1} ${taskoperation} ${num2} = x`)
+    content=document.createTextNode(`${i+1}.Aufgabe: ${num1} ${taskoperation} ${num2} =`)
     listel.appendChild(content)
     list.appendChild(listel)
    
@@ -93,12 +99,12 @@ function resetFormSW(){
         remItem=document.querySelector(`.task${i}`)
         list.removeChild(remItem)
     }
-    document.querySelector(".startValue").valueL=1
-    document.querySelector(".endValue").value=10
-    document.querySelector(".numberOfTasks").value=10
+    document.querySelector(".startValueSW").value="1"
+    document.querySelector(".endValueSW").value="10"
+    document.querySelector(".numberOfTasksSW").value="10"
     document.querySelector(".taskHead").style.visibility="hidden"
     document.querySelector(".buttonResetT").disabled=true;
-    document.querySelector(".buttonConfirmSW").enabled=true;
+    document.querySelector(".buttonConfirmSW").disabled=false;
     document.querySelector(".checkBasic").checked=false;
     document.querySelector(".btnPrint").disabled=true;
 }

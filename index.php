@@ -419,6 +419,9 @@
             border: 1px double black;
             border-radius: 8px;
         }
+        .schoolwork li{
+            list-style-type: disc;
+        }
         .resultsWork{
             margin: 16px;
             border: 1px solid black;
@@ -948,8 +951,8 @@
         <input type="checkbox" class="checkBasic" checked="false"><br>
         <!-- Buttons -->
         <button onclick="randomTasks()" class="buttonConfirmSW">Aufgaben erstellen</button><br>
-        <button onclick="resetFormSW()" class="buttonResetT">Reset</button><br>
-        <button onclick="printTasks()"class="btnPrint" >Drucken</button>
+        <button onclick="resetFormSW()" class="buttonResetT" disabled>Reset</button><br>
+        <button onclick="printTasks()"class="btnPrint" disabled>Drucken</button>
         <ol class="taskList">
             <h3 class="taskHead">Bitte löse die folgenden Aufgaben:</h3>
         </ol>
